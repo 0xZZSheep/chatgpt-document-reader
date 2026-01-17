@@ -1,17 +1,13 @@
-name: Build debugger
-run-name: 'Build debugger ${{ github.event.inputs.name }}'
+name: Build debugger ubuntu
+run-name: 'Build debugger ubuntu'
 
 on:
   workflow_dispatch:
-    inputs:
-      name:
-        description: 'Enter your build name'
-        required: true
 
 jobs:
 
-  build_macos:
-    name: Build on MacOS
+  build_ubuntu:
+    name: Build on Ubuntu
     environment: release
     runs-on: ubuntu-latest
     permissions:
